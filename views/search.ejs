@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <a href="/"> Home </a> |
+    <a href="/about"> about us </a> |
+    <a href="/service"> service </a> |
+    <a href="/update"> Update </a> |
+    <a href="/search"> Search </a> |
+    <a href="/contact"> Contact </a> |
+    <hr size="4" color="yellow"/>
+    <h1> Search Student Record</h1>
+     <form method="post" action="/search">
+        Enter Rollno : <input type="text" name="rollno" >
+        <input type="submit" value="search">
+     </form>
+  <hr size="4" color="red">
+ <table width="600" bgcolor="yellow" border="1">
+    <tr>
+        <th> Rollno </th>
+        <th>Name </th>
+        <th> City </th>
+        <th> Fees</th>
+    </tr>
+  <% 
+     myData.forEach((key)=>{ %>
+        <tr textalign="center">
+            <td> <%= key.rollno %> </td>
+            <td> <%= key.name %> </td>
+            <td> <%= key.city %> </td>
+            <td> <%= key.fees %> </td>
+        </tr>
+
+ <%       
+     })
+  %>
+</table>
+    <hr size="4" color="yellow"/>
+    www.mycompany.com
+</body>
+</html>

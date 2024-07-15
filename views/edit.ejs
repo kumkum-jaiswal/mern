@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <a href="/"> Home </a> |
+    <a href="/about"> about us</a> |
+    <a href="/service"> service </a> |
+    <a href="/update"> Update </a> |
+    <a href="/search"> Search </a> |
+    <a href="/contact"> Contact </a> |
+    <hr size="4" color="yellow"/>
+    <h1>Edit Student Records</h1>
+    <form method="post" action="/updatesave">
+        <input type="hidden" name="recid" value="<%= myRec.id %>" >
+        Edit Rollno <input type="text" name="rollno" value="<%= myRec.rollno %>" >
+        <br>
+        Edit Name <input type="text" name="name" value="<%= myRec.name %>" >
+        <br>
+        Edit City <input type="text" name="city" value="<%= myRec.city %>" >
+        <br>
+        Edit Fees <input type="text" name="fees" value="<%= myRec.fees %>" >
+        <br>
+        <input type="submit" value="update save!">
+    </form>
+    <hr size="4" color="yellow"/>
+    www.mycompany.com
+</body>
+</html>

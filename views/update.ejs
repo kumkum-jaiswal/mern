@@ -27,9 +27,9 @@
             <th>Name</th>
             <th>City</th>
             <th>Fess</th>
+            <th></th>
+            <th></th>
         </tr>
-    
-
     <%
        Data.map((key)=>{
         <!-- if (key.rollno%2==0){ -->
@@ -39,8 +39,15 @@
         <td> <%=key.name   %></td>
         <td> <%=key.city   %></td>
         <td> <%=key.fees   %></td>
-       </tr>
+        <td> <%=key._id   %></td>
+        <td>
+            <a href="/recdelete/?id=<%=key._id%>">delete</a>
+        </td>
+        <td>
+            <a href="/recedit/?id=<%= key._id %>">  Edit </a>  
+          </td>
 
+       </tr>
      <%
     <!-- }      -->
        })
